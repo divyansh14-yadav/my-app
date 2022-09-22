@@ -1,0 +1,102 @@
+<%-include('header.ejs')%>
+<%-include('adminnav.ejs')%>
+
+	
+
+    
+    <!--/ ABOUT SECTION -->   
+    <section id="about page" class="about page-wrapper">
+        <div class="container">
+                    <div style="margin-top:45px ;"  data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2>manageuser page</h2>
+                         <table class="table table-bordered">
+                            <tr>
+                                <th>Reg id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Info</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            <% for(let row of userdetails){%>
+                                <tr>
+                                    <td><%- row._id%></td>
+                                    <td><%- row.name%></td>
+                                    <td><%- row.email%></td>
+                                    <td><%- row.mobile%></td>
+                                    <td><%- row.address%></td>
+                                    <td><%- row.city%></td>
+                                    <td><%- row.info%></td>
+                                    <td>
+                                     <% if(row.status) {%>
+                                        <a href="/admin/manageuserstatus?s=block&regid=<%- row._id%>" title="block user">
+                                        <img src="../images/block.jpg" height="90" width="90"/>
+                                        </a>
+
+                                        <%} else {%>
+                                            <a href="/admin/manageuserstatus?s=unblock&regid=<%- row._id%>" title="unblock user">
+                                                <img src="../images/unblock1.jpeg" height="90" width="90"/>
+                                                </a>
+                                        <%} %>
+                                        </td>
+                                    <td><a href="/admin/manageuserstatus?s=delete&regid=<%- row._id%>" title="delete">
+                                        <img src="../images/del.jpeg" height="90" width="90"/>
+                                        </a></td>
+                                    </tr>
+                                <% } %> 
+                         </table>
+                                                
+                        <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, consequuntur quia necessitatibus numquam saepe similique at nulla, blanditiis error dolor placeat totam nam iure ad? Obcaecati exercitationem placeat sequi vitae.</p> -->
+                        <hr>
+                    </div><!-- end title -->
+        
+                    
+            <!-- <div class="row text-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.4s" class="about-box">
+                            <div class="about-border"> <i class="fa fa-tablet aligncenter"></i></div>
+                            <h3>Office Contact</h3>
+                    
+                        </div>
+                    </div>
+            </div>   -->
+                            
+                        </div>
+                    </div>
+                    <!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <!-- <div class="about-border"> <i class="fa fa-bars aligncenter"></i></div> -->
+                                <!-- <h3>Service Area</h3>
+                                <a href="">Ecommerce Support</a>
+                                <a href="">Product Selling</a>
+                                <a href="">Factory Outlet Support</a>
+                                 -->
+                        </div>
+                    </div><!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <!-- <div class="about-border"> <i class="fa fa-folder-o aligncenter"></i></div>
+                                <h3>Usefule Pages</h3>
+                                <a href="">About Us</a>
+                                <a href="">Contact Us</a>
+                                <a href="">service</a>
+                                 -->
+
+                                
+                        </div>
+            
+                               
+                        </div>
+                    </div><!-- end column -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    
+        <%-include('footer.ejs')%>
+        
+    

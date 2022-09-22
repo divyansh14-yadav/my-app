@@ -1,0 +1,87 @@
+<%-include('header.ejs')%>
+<%-include('usernav.ejs')%>
+
+	
+
+    
+    <!--/ ABOUT SECTION -->   
+    <section id="about page" class="about page-wrapper">
+        <div class="container">
+                    <div style="margin-top:40px ;"  data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2>Make Payment For Charity</h2>
+                        <h3>Donate &#8377;100</h3>
+                       
+                        <form action="<%-paypalURL%>" method="post">
+                            <!-- Identify your business so that you can collect the payments. -->
+                            <input type="hidden" name="business" value=<%-paypalID%> >
+                            
+                            <!-- Specify a Buy Now button. -->
+                            <input type="hidden" name="cmd" value="_xclick">
+                            
+                            <!-- Specify details about the item that buyers will purchase. -->
+                            <input type="hidden" name="item_name" value="funds">
+                            <!--<input type="hidden" name="item_number" value=1>-->
+                            <input type="hidden" name="amount" value="100">
+                            <input type="hidden" name="currency_code" value="USD">
+                            
+                            <!-- Specify URLs -->
+                            <input type='hidden' name='cancel_return' value=http://localhost:3000/user/cancel/ >
+                            <input type='hidden' name='return' value=http://localhost:3000/user/payment/?price=100&sunm=<%-sunm%> >
+                            
+                            <!-- Display the payment button. -->
+                            <input type="image" name="submit" border="0"
+                            height="100" width="200" src="../images/donate.jpg" alt="PayPal - The safer, easier way to pay online">
+                            <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                        </form>
+                                     
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, consequuntur quia necessitatibus numquam saepe similique at nulla, blanditiis error dolor placeat totam nam iure ad? Obcaecati exercitationem placeat sequi vitae.</p>
+                        <hr>
+                    </div><!-- end title -->
+        
+                    
+            <!-- <div class="row text-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.4s" class="about-box">
+                            <!-- <div class="about-border"> <i class="fa fa-tablet aligncenter"></i></div> -->
+                            <!-- <h3>Office Contact</h3> -->
+                    
+                        </div>
+                    </div>
+            </div>  
+                            
+                        </div>
+                    </div>
+                    <!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <!-- <div class="about-border"> <i class="fa fa-bars aligncenter"></i></div> -->
+                                <!-- <h3>Service Area</h3>
+                                <a href="">Ecommerce Support</a>
+                                <a href="">Product Selling</a>
+                                <a href="">Factory Outlet Support</a>
+                                 -->
+                        </div>
+                    </div><!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <!-- <div class="about-border"> <i class="fa fa-folder-o aligncenter"></i></div>
+                                <h3>Usefule Pages</h3>
+                                <a href="">About Us</a>
+                                <a href="">Contact Us</a>
+                                <a href="">service</a>
+                                 -->
+
+                                
+                        </div>
+            
+                               
+                        </div>
+                    </div><!-- end column -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    
+        <%-include('footer.ejs')%>
+        
+    

@@ -1,0 +1,120 @@
+<%-include('header.ejs')%>
+<%-include('navbar.ejs')%> 
+
+<%-include('banner.ejs')%>
+	
+<script>
+  function checkemail(emailid)
+  {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("")
+    document.getElementById("response").innerHTML=emailid
+  }
+</script>
+    
+    <!--/ ABOUT SECTION -->   
+    <section id="register Page" class="register-wrapper">
+        <div class="container">
+                    <div style="margin-top:250px ;"  data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2>register Here</h2>
+                        <font color="black"><%- output%></font>
+                        <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, consequuntur quia necessitatibus numquam saepe similique at nulla, blanditiis error dolor placeat totam nam iure ad? Obcaecati exercitationem placeat sequi vitae.</p> -->
+                        <form method="post" action="/register">
+                            <div class="form-group">
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" name="email" onkeyup="checkemail(this.value)">
+                            <fonts id="response"></fonts>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                              </div>
+                              <div class="form-group">
+                                <label for="mobile">Mobile:</label>
+                                <input type="text" class="form-control" id="mobile" name="mobile">
+                              </div>
+                              <div class="form-group">
+                                <label for="address">Address:</label>
+                                <textarea rows="5" class="form-control" id="address" name="address"></textarea>
+                              </div>
+                              <div class="form-group">
+                                <label for="city">City:</label>
+                                <select class="form-control" id="city" name="city">
+                                 <option>Indore</option>
+                                 <option>Bhopal</option>
+                                 <option>Ujjain</option>
+                                 <option>Dewas</option>                           
+                            </select>
+                            <div class="form-group">
+                                <label for="gender">Gender:</label>
+                                Male<input type="radio"  id="male" name="gender" value="male">
+                                Female<input type="radio"  id="female" name="gender" value="female">
+                              </div>
+                              </div>
+                            <button type="submit" class="btn btn-success">Register</button>
+                          </form>                       
+                        <hr>
+                    </div><!-- end title -->
+        
+            <div class="row text-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.4s" class="about-box">
+                            <div class="about-border"> <i class="fa fa-tablet aligncenter"></i></div>
+                            <h3>Office Contact</h3>
+                            <p><i class="fa fa-map-marker-alt"></i>X Stock Manager , Indore, India</p>
+                                <p><i class="fa fa-phone-alt"></i>XXX XXX XXXX</p>
+                                <p><i class="fa fa-envelope"></i>StockManager@mail.com</p>
+                            
+                        </div>
+                    </div><!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-bars aligncenter"></i></div>
+                                <h3>Service Area</h3>
+                                <a href="">Ecommerce Support</a>
+                                <a href="">Product Selling</a>
+                                <a href="">Factory Outlet Support</a>
+                                
+                        </div>
+                    </div><!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-folder-o aligncenter"></i></div>
+                                <h3>Usefule Pages</h3>
+                                <a href="">About Us</a>
+                                <a href="">Contact Us</a>
+                                <a href="">service</a>
+                                
+
+                                
+                        </div>
+                    </div><!-- end column -->
+            
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-gear aligncenter"></i></div>
+                                <h3>Submit Query</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu
+                                        </p>
+                                        <div class="form">
+                                            <input class="form-control" placeholder="Email here">
+                                            <button class="btn" style="background-color:black;">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                        </div>
+                    </div><!-- end column -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    
+        <%-include('footer.ejs')%>
+        
+    

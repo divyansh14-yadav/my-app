@@ -1,0 +1,54 @@
+
+    <!--/HEADER SECTION -->
+    <!-- <header class="header"> -->
+        <div class="container" style="color:white;"  style="padding-bottom: 100px;">
+            <div class="navbar navbar-default" role="navigation" style="background-color:black;color: yellow; ">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="color: yellow;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">STOCK MANAGER </a>
+                    </div><!-- end navbar-header -->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a data-scroll href="/admin" class="int-collapse-menu" style="color:rgb(231, 162, 33) ;">admin home</a></li>
+                         <li><a data-scroll href="/admin/manageuser" class="int-collapse-menu"  style="color:rgb(231, 162, 33) ;">manage user</a></li>
+                       <!-- dropdown starts -->
+                         <!-- <li class="nav-item dropdown">
+                         <li><a data-scroll href="" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:rgb(231, 162, 33) ;">pages <span class="caret"></span></a></li>
+                         <ul class="dropdown-menu">
+                          <li> <a href="" class="dropdown-item">Blog Grid</a></li>
+                            <li><a href="" class="dropdown-item">Detail Page</a></li>
+                         </ul> 
+                        </li> -->
+
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:rgb(231, 162, 33) ;">Manage option <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="/admin/addcategory" style="color:rgb(231, 162, 33) ;">Add Category</a></li>
+                            <li><a href="/admin/addsubcategory" style="color:rgb(231, 162, 33) ;">Add Sub Category</a></li>
+                          
+                          </ul>
+                        </li>
+                    
+
+
+                        <!-- <li><a data-scroll href="/contact" class="int-collapse-menu">Contact</a></li> -->
+                        <!-- <li><a data-scroll href="/service" class="int-collapse-menu">Services</a></li> -->
+                        <!-- <li><a data-scroll href="/register" class="int-collapse-menu">Register</a></li> --> 
+                        <!-- <li><a data-scroll href="/product" class="int-collapse-menu">products</a></li>  -->
+                            
+                        <li><a data-scroll href="/login" class="int-collapse-menu" style="color:rgb(231, 162, 33) ;">Logout</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+                <font style="color:whitesmoke; margin-left: 350px; font-size: medium;" >Welcome User:<%- sunm%></font>
+            </div>
+            
+        </div><!-- end container -->
+        <!-- <font >welcome admin:<%- sunm%></font> -->
+    </header><!-- end header -->
